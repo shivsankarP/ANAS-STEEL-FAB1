@@ -1,0 +1,123 @@
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const Loader = ({ onComplete, onRevealStart }) => {
+    const [isAnimating, setIsAnimating] = useState(true);
+    const [targetPos, setTargetPos] = useState({ x: 0, y: 0, scale: 0.15 });
+
+    useEffect(() => {
+        const calculateTarget = () => {
+            const isMobile = window.innerWidth < 768;
+            const containerWidth = Math.min(window.innerWidth * 0.92, 1280);
+            const sideMargin = (window.innerWidth - containerWidth) / 2;
+
+            // Adjust X target based on navbar layout
+            // On desktop, the logo is inside a padded container
+            const targetX = isMobile
+                ? - (window.innerWidth / 2) + 80
+                : - (window.innerWidth / 2) + sideMargin + 110;
+
+            // Adjust Y target (navbar height + padding)
+            const targetY = isMobile
+                ? - (window.innerHeight / 2) + 70
+                : - (window.innerHeight / 2) + 80;
+
+            setTargetPos({
+                x: targetX,
+                y: targetY,
+                scale: isMobile ? 0.25 : 0.18
+            });
+        };
+
+        calculateTarget();
+        window.addEventListener('resize', calculateTarget);
+
+        const revealTimer = setTimeout(() => {
+            if (onRevealStart) onRevealStart();
+        }, 3000);
+
+        const completeTimer = setTimeout(() => {
+            setIsAnimating(false);
+            if (onComplete) onComplete();
+        }, 5000);
+
+        return () => {
+            window.removeEventListener('resize', calculateTarget);
+            clearTimeout(revealTimer);
+            clearTimeout(completeTimer);
+        };
+    }, [onComplete, onRevealStart]);
+
+    return (
+        <AnimatePresence>
+            {isAnimating && (
+                <motion.div
+                    initial={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2, ease: "circIn" }}
+                    className="fixed inset-0 z-[100] bg-white flex items-center justify-center overflow-hidden"
+                >
+                    {/* Animated Cinematic Logo */}
+                    <div className="relative w-full h-full flex items-center justify-center">
+                        <div className="flex flex-col items-center">
+                            <motion.div
+                                initial={{ scale: 0.7, opacity: 0, filter: "blur(20px)" }}
+                                animate={{
+                                    scale: [0.7, 1, targetPos.scale],
+                                    opacity: [0, 1, 1],
+                                    filter: ["blur(20px)", "blur(0px)", "blur(0px)"],
+                                    x: [0, 0, targetPos.x],
+                                    y: [0, 0, targetPos.y]
+                                }}
+                                transition={{
+                                    duration: 5.0,
+                                    times: [0, 0.5, 1],
+                                    ease: [0.16, 1, 0.3, 1]
+                                }}
+                                className="relative z-20"
+                            >
+                                {/* Main Logo Container */}
+                                <img
+                                    src="/rm_logo.png"
+                                    alt="Logo"
+                                    className="w-64 md:w-[450px] h-auto drop-shadow-[0_0_50px_rgba(0,32,91,0.2)]"
+                                />
+
+                                {/* Inner Glow Layer */}
+                                <motion.div
+                                    animate={{ opacity: [0.3, 0.6, 0.3] }}
+                                    transition={{ duration: 2, repeat: Infinity }}
+                                    className="absolute inset-0 bg-gradient-to-tr from-cobalt/20 via-transparent to-navy/10 blur-[40px] rounded-full -z-10"
+                                />
+                            </motion.div>
+
+                            {/* Company Name Text - Disappears as movement starts */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{
+                                    opacity: [0, 1, 1, 0],
+                                    y: [20, 0, 0, 0]
+                                }}
+                                transition={{
+                                    duration: 5.0,
+                                    times: [0, 0.15, 0.55, 0.65],
+                                    ease: "easeInOut"
+                                }}
+                                className="mt-8 text-lg md:text-5xl tracking-widest text-navy flex items-center drop-shadow-xl font-ethnocentric"
+                            >
+                                ANAS&nbsp;<span className="text-cobalt">STEEL</span>&nbsp;FAB
+                            </motion.div>
+                        </div>
+                    </div>
+
+                    {/* Industrial Backdrop: Subtle Grid & Particles */}
+                    <div className="absolute inset-0 pointer-events-none">
+                        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(circle, #00205B 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+                    </div>
+                </motion.div>
+            )}
+        </AnimatePresence>
+    );
+};
+
+export default Loader;
