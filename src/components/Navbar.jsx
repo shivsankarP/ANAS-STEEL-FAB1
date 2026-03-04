@@ -38,6 +38,7 @@ const Navbar = () => {
         { name: 'About Us', href: isHome ? '#about' : '/#about' },
         { name: 'Services', href: isHome ? '#services' : '/#services' },
         { name: 'Projects', href: isHome ? '#projects' : '/#projects' },
+        { name: 'Project Gallery', href: '/recently-done' },
         { name: 'Contact', href: isHome ? '#contact' : '/#contact' },
     ];
 

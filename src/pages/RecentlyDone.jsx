@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FiArrowLeft, FiX, FiMaximize2 } from 'react-icons/fi';
+import { Link, useSearchParams } from 'react-router-dom';
+import { FiArrowLeft, FiX, FiMaximize2, FiGrid } from 'react-icons/fi';
 
 // This array will be where you add your new project images
 // Categorized Gallery Structure
@@ -94,26 +94,83 @@ const categories = [
             { url: '/projects/etp/aa.jpeg', title: 'ETP Project 3' }
         ]
     },
-
+    {
+        id: 3,
+        name: 'PUFF SHEET WORK',
+        images: []
+    },
+    {
+        id: 5,
+        name: 'PERGOLAS',
+        images: []
+    },
+    {
+        id: 6,
+        name: 'MEZZANINE FLOORS',
+        images: []
+    },
+    {
+        id: 7,
+        name: 'CURVED ROOFINGS',
+        images: []
+    },
+    {
+        id: 8,
+        name: 'GATES',
+        images: []
+    },
+    {
+        id: 12,
+        name: 'SITE ERECTION',
+        images: []
+    }
 ];
 
 const RecentlyDone = () => {
     const [selectedImg, setSelectedImg] = useState(null);
+    const [searchParams] = useSearchParams();
+    const filterId = searchParams.get('filter');
+
+    const filteredCategories = filterId
+        ? categories.filter(cat => cat.id.toString() === filterId)
+        : categories;
 
     useEffect(() => {
+        const hash = window.location.hash;
+        if (hash) {
+            const id = hash.replace('#', '');
+            const element = document.getElementById(id);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+                return;
+            }
+        }
         window.scrollTo(0, 0);
     }, []);
 
     return (
         <div className="pt-40 min-h-screen bg-white text-navy">
             <div className="container mx-auto px-6 mb-12">
-                <Link
-                    to="/"
-                    className="inline-flex items-center gap-2 text-navy hover:text-cobalt font-bold transition-all group"
-                >
-                    <FiArrowLeft className="group-hover:-translate-x-1 transition-transform" />
-                    Back to Home
-                </Link>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <Link
+                        to="/"
+                        className="inline-flex items-center gap-2 text-navy hover:text-cobalt font-bold transition-all group"
+                    >
+                        <FiArrowLeft className="group-hover:-translate-x-1 transition-transform" />
+                        Back to Home
+                    </Link>
+                    {filterId && (
+                        <Link
+                            to="/recently-done"
+                            className="inline-flex items-center gap-2 text-cobalt hover:text-navy font-bold transition-all group"
+                        >
+                            <FiGrid className="group-hover:rotate-12 transition-transform" />
+                            View All Projects
+                        </Link>
+                    )}
+                </div>
             </div>
 
             <div className="container mx-auto px-6 mb-16">
@@ -130,8 +187,8 @@ const RecentlyDone = () => {
             </div>
 
             <div className="container mx-auto px-6 pb-24 space-y-20">
-                {categories.map((category) => (
-                    <div key={category.id} className="relative">
+                {filteredCategories.map((category) => (
+                    <div key={category.id} id={`category-${category.id}`} className="relative scroll-mt-32">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -176,7 +233,7 @@ const RecentlyDone = () => {
                             </div>
                         ) : (
                             <div className="py-12 px-8 rounded-3xl border-2 border-dashed border-slate-100 bg-slate-50/50 text-center">
-                                <p className="text-slate-400 font-medium italic">No projects uploaded under {category.name} yet.</p>
+                                <p className="text-slate-400 font-medium italic">No Images Yet....</p>
                             </div>
                         )}
                     </div>
