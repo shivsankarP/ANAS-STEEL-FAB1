@@ -81,7 +81,7 @@ const projectItems = [
         galleryId: 11
     },
     {
-        title: 'SITE ERECTION',
+        title: 'Heavy Structure Fabrication & Erection',
         location: 'Mainland Sites',
         country: 'India',
         image: '/services/erection.png',
@@ -153,8 +153,8 @@ const Projects = () => {
 
                                 {/* Bottom: Info Section */}
                                 <div className="px-5 pb-5">
-                                    <div className="overflow-hidden mb-1">
-                                        <h3 className="text-base font-bold text-navy mb-0.5 group-hover:text-cobalt transition-colors duration-300 truncate">
+                                    <div className="mb-1">
+                                        <h3 className="text-base font-bold text-navy mb-0.5 group-hover:text-cobalt transition-colors duration-300">
                                             {project.title}
                                         </h3>
                                     </div>

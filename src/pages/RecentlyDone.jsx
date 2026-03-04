@@ -121,7 +121,7 @@ const categories = [
     },
     {
         id: 12,
-        name: 'SITE ERECTION',
+        name: 'Heavy Structure Fabrication & Erection',
         images: []
     }
 ];

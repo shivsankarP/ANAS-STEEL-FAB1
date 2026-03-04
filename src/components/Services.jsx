@@ -17,7 +17,7 @@ const services = [
         image: '/services/ETP.jpg'
     },
     {
-        title: 'Site Erection',
+        title: 'Heavy Structure Fabrication & Erection',
         desc: 'Professional on-site erection services for complex steel structures following strict safety standards.',
         icon: <FaHardHat />,
         image: '/services/erection.png'

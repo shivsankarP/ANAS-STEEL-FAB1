@@ -21,7 +21,7 @@ const POPULAR_ITEMS = [
     },
     {
         id: 3,
-        title: 'Site Erection',
+        title: 'Heavy Structure Fabrication & Erection',
         tag: 'Structural',
         tagline: 'Rising steel, built right — safe, swift, and uncompromising.',
         image: '/services/erection.png'
