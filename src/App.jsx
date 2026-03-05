@@ -47,46 +47,55 @@ function App() {
     return (
         <Router>
             <HashScrollHandler />
-            <div className="relative overflow-hidden bg-white">
-                {/* Loader handles its own logic and signals when to reveal content */}
-                <Loader
-                    onRevealStart={() => setIsRevealed(true)}
-                />
-
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{
-                        opacity: isRevealed ? 1 : 0,
-                    }}
-                    transition={{
-                        duration: 0.3,
-                        ease: "easeOut"
-                    }}
-                >
-                    <ScrollProgress />
-                    <Navbar />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/projects" element={<RouteWrapper><ProjectsPage /></RouteWrapper>} />
-                        <Route path="/recently-done" element={<RouteWrapper><RecentlyDone /></RouteWrapper>} />
-                    </Routes>
-                    <Footer />
-                    <div className="w-full py-5 flex items-center justify-center" style={{ backgroundColor: '#050d1a' }}>
-                        <a
-                            href="https://www.instagram.com/intellex.web?igsh=MXc4Z2Uwd243OHpqdA%3D%3D&utm_source=qr"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-3 group cursor-pointer"
-                        >
-                            <span className="text-white font-bold tracking-widest uppercase text-sm group-hover:text-gray-300 transition-colors">Meet the Developers</span>
-                            <FaInstagram className="text-white text-xl group-hover:text-gray-300 transition-colors" />
-                        </a>
-                    </div>
-                </motion.div>
-            </div>
+            <AppLayout isRevealed={isRevealed} setIsRevealed={setIsRevealed} />
         </Router>
     );
 }
+
+const AppLayout = ({ isRevealed, setIsRevealed }) => {
+    const location = useLocation();
+    const isRecentlyDone = location.pathname === '/recently-done';
+
+    return (
+        <div className="relative overflow-hidden bg-white">
+            {/* Loader handles its own logic and signals when to reveal content */}
+            <Loader
+                onRevealStart={() => setIsRevealed(true)}
+            />
+
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                    opacity: isRevealed ? 1 : 0,
+                }}
+                transition={{
+                    duration: 0.3,
+                    ease: "easeOut"
+                }}
+            >
+                {!isRecentlyDone && <ScrollProgress />}
+                {!isRecentlyDone && <Navbar />}
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/projects" element={<RouteWrapper><ProjectsPage /></RouteWrapper>} />
+                    <Route path="/recently-done" element={<RouteWrapper><RecentlyDone /></RouteWrapper>} />
+                </Routes>
+                <Footer />
+                <div className="w-full py-5 flex items-center justify-center" style={{ backgroundColor: '#050d1a' }}>
+                    <a
+                        href="https://www.instagram.com/intellex.web?igsh=MXc4Z2Uwd243OHpqdA%3D%3D&utm_source=qr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 group cursor-pointer"
+                    >
+                        <span className="text-white font-bold tracking-widest uppercase text-sm group-hover:text-gray-300 transition-colors">Meet the Developers</span>
+                        <FaInstagram className="text-white text-xl group-hover:text-gray-300 transition-colors" />
+                    </a>
+                </div>
+            </motion.div>
+        </div>
+    );
+};
 
 // Simple wrapper to ensure scroll to top on route change
 const RouteWrapper = ({ children }) => {

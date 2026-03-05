@@ -11,18 +11,18 @@ const projectItems = [
         galleryId: 13
     },
     {
-        title: 'CANOPY',
-        location: 'Commercial Center',
-        country: 'Kerala, India',
-        image: '/projects/canopy.jpg',
-        galleryId: 1
+        title: 'EFFLUENT TREATMENT PLANT',
+        location: 'Chemical Industry',
+        country: 'India',
+        image: '/services/ETP.jpg',
+        galleryId: 11
     },
     {
-        title: 'ROOF TRUSS WORKS',
-        location: 'Storage Facility',
-        country: 'Kochi, India',
-        image: '/projects/rooftruss.jpg',
-        galleryId: 2
+        title: 'Heavy Structure Fabrication & Erection',
+        location: 'Mainland Sites',
+        country: 'India',
+        image: '/services/erection.png',
+        galleryId: 12
     },
     {
         title: 'PUFF SHEET WORK',
@@ -74,18 +74,18 @@ const projectItems = [
         galleryId: 9
     },
     {
-        title: 'EFFLUENT TREATMENT PLANT',
-        location: 'Chemical Industry',
-        country: 'India',
-        image: '/services/ETP.jpg',
-        galleryId: 11
+        title: 'CANOPY',
+        location: 'Commercial Center',
+        country: 'Kerala, India',
+        image: '/projects/canopy.jpg',
+        galleryId: 1
     },
     {
-        title: 'Heavy Structure Fabrication & Erection',
-        location: 'Mainland Sites',
-        country: 'India',
-        image: '/services/erection.png',
-        galleryId: 12
+        title: 'ROOF TRUSS WORKS',
+        location: 'Storage Facility',
+        country: 'Kochi, India',
+        image: '/projects/rooftruss.jpg',
+        galleryId: 2
     }
 ];
 

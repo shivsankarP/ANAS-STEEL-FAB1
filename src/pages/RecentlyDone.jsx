@@ -226,7 +226,7 @@ const RecentlyDone = () => {
     }, []);
 
     return (
-        <div className="pt-40 min-h-screen bg-white text-navy">
+        <div className="pt-10 min-h-screen bg-white text-navy">
             <div className="container mx-auto px-6 mb-12">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <Link
