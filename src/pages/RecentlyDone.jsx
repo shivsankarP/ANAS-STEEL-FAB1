@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useSearchParams } from 'react-router-dom';
-import { FiArrowLeft, FiX, FiMaximize2, FiGrid } from 'react-icons/fi';
+import { FiArrowLeft, FiX, FiMaximize2, FiGrid, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 // Puff Sheet Work
 import puffWork1 from '../assets/puff/work1.jpg';
@@ -165,9 +165,46 @@ const categories = [
 ];
 
 const RecentlyDone = () => {
-    const [selectedImg, setSelectedImg] = useState(null);
+    const [selectedIndex, setSelectedIndex] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [swipeStart, setSwipeStart] = useState(null);
     const [searchParams] = useSearchParams();
     const filterId = searchParams.get('filter');
+
+    const isOpen = selectedIndex !== null && selectedCategory !== null;
+    const currentImages = selectedCategory ? selectedCategory.images : [];
+    const selectedImg = isOpen ? currentImages[selectedIndex] : null;
+
+    const openImage = (category, index) => {
+        setSelectedCategory(category);
+        setSelectedIndex(index);
+    };
+
+    const closeImage = () => {
+        setSelectedIndex(null);
+        setSelectedCategory(null);
+    };
+
+    const goPrev = useCallback(() => {
+        if (!isOpen) return;
+        setSelectedIndex(i => (i - 1 + currentImages.length) % currentImages.length);
+    }, [isOpen, currentImages.length]);
+
+    const goNext = useCallback(() => {
+        if (!isOpen) return;
+        setSelectedIndex(i => (i + 1) % currentImages.length);
+    }, [isOpen, currentImages.length]);
+
+    useEffect(() => {
+        if (!isOpen) return;
+        const handleKey = (e) => {
+            if (e.key === 'ArrowLeft') goPrev();
+            else if (e.key === 'ArrowRight') goNext();
+            else if (e.key === 'Escape') closeImage();
+        };
+        window.addEventListener('keydown', handleKey);
+        return () => window.removeEventListener('keydown', handleKey);
+    }, [isOpen, goPrev, goNext]);
 
     const filteredCategories = filterId
         ? categories.filter(cat => cat.id.toString() === filterId)
@@ -248,7 +285,7 @@ const RecentlyDone = () => {
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: index * 0.1 }}
-                                        onClick={() => setSelectedImg(img)}
+                                        onClick={() => openImage(category, index)}
                                         className="flex flex-col gap-3 group cursor-pointer"
                                     >
                                         <div className="relative overflow-hidden rounded-2xl shadow-md border border-slate-100 aspect-[4/3]">
@@ -280,31 +317,75 @@ const RecentlyDone = () => {
 
             {/* Lightbox for full-view */}
             <AnimatePresence>
-                {selectedImg && (
+                {isOpen && selectedImg && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        onClick={() => setSelectedImg(null)}
-                        className="fixed inset-0 z-[100] bg-white/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-12"
+                        onClick={closeImage}
+                        className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl flex items-center justify-center p-4 md:p-12"
+                        onTouchStart={(e) => setSwipeStart(e.touches[0].clientX)}
+                        onTouchEnd={(e) => {
+                            if (swipeStart === null) return;
+                            const delta = swipeStart - e.changedTouches[0].clientX;
+                            if (Math.abs(delta) > 50) delta > 0 ? goNext() : goPrev();
+                            setSwipeStart(null);
+                        }}
                     >
+                        {/* Close button */}
                         <button
-                            className="absolute top-8 right-8 text-navy text-4xl hover:text-cobalt transition-colors"
-                            onClick={() => setSelectedImg(null)}
+                            className="absolute top-5 right-5 z-10 w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/25 text-white text-2xl transition-all backdrop-blur-sm border border-white/20"
+                            onClick={(e) => { e.stopPropagation(); closeImage(); }}
                         >
                             <FiX />
                         </button>
-                        <motion.img
-                            initial={{ scale: 0.8, y: 20 }}
-                            animate={{ scale: 1, y: 0 }}
-                            src={selectedImg.url}
-                            alt={selectedImg.title}
-                            className="max-w-full max-h-[85vh] object-contain shadow-2xl rounded-2xl border-4 border-white"
-                        />
-                        <div className="absolute bottom-10 left-0 right-0 text-center">
-                            <p className="text-navy font-black uppercase tracking-[0.3em] text-lg">
+
+                        {/* Prev button */}
+                        {currentImages.length > 1 && (
+                            <button
+                                className="absolute left-3 md:left-8 z-10 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/25 text-white text-3xl transition-all backdrop-blur-sm border border-white/20 shadow-lg"
+                                onClick={(e) => { e.stopPropagation(); goPrev(); }}
+                            >
+                                <FiChevronLeft />
+                            </button>
+                        )}
+
+                        {/* Image */}
+                        <AnimatePresence mode="wait">
+                            <motion.img
+                                key={selectedImg.url}
+                                initial={{ opacity: 0, scale: 0.95, x: 30 }}
+                                animate={{ opacity: 1, scale: 1, x: 0 }}
+                                exit={{ opacity: 0, scale: 0.95, x: -30 }}
+                                transition={{ duration: 0.25 }}
+                                src={selectedImg.url}
+                                alt={selectedImg.title}
+                                onClick={(e) => e.stopPropagation()}
+                                className="max-w-full max-h-[80vh] object-contain shadow-2xl rounded-2xl border border-white/10"
+                                style={{ maxWidth: 'calc(100vw - 120px)' }}
+                            />
+                        </AnimatePresence>
+
+                        {/* Next button */}
+                        {currentImages.length > 1 && (
+                            <button
+                                className="absolute right-3 md:right-8 z-10 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/25 text-white text-3xl transition-all backdrop-blur-sm border border-white/20 shadow-lg"
+                                onClick={(e) => { e.stopPropagation(); goNext(); }}
+                            >
+                                <FiChevronRight />
+                            </button>
+                        )}
+
+                        {/* Caption + counter */}
+                        <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-1 pointer-events-none">
+                            <p className="text-white font-bold uppercase tracking-[0.2em] text-sm md:text-base px-4 text-center drop-shadow-lg">
                                 {selectedImg.title}
                             </p>
+                            {currentImages.length > 1 && (
+                                <p className="text-white/60 text-xs font-medium tracking-widest">
+                                    {selectedIndex + 1} / {currentImages.length}
+                                </p>
+                            )}
                         </div>
                     </motion.div>
                 )}
