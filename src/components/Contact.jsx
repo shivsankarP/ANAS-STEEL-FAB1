@@ -41,7 +41,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-slate-400 text-sm">Main Office</p>
-                                    <p className="text-xl font-bold">+91 97461 02236</p>
+                                    <a href="tel:+919746102236" className="text-xl font-bold hover:text-periwinkle transition-colors">+91 97461 02236</a>
                                 </div>
                             </div>
 
@@ -51,7 +51,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-slate-400 text-sm">Contact Person</p>
-                                    <p className="text-xl font-bold">+91 98464 02236</p>
+                                    <a href="tel:+919846402236" className="text-xl font-bold hover:text-periwinkle transition-colors">+91 98464 02236</a>
                                 </div>
                             </div>
 
