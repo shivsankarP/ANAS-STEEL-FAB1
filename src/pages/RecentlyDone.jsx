@@ -3,6 +3,28 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useSearchParams } from 'react-router-dom';
 import { FiArrowLeft, FiX, FiMaximize2, FiGrid } from 'react-icons/fi';
 
+// Puff Sheet Work
+import puffWork1 from '../assets/puff/work1.jpg';
+import puffWork2 from '../assets/puff/work2.jpg';
+
+// Pergolas
+import pergoWork1 from '../assets/pergo/pergwrok1.jpg';
+
+// Curved Roofings
+import curWork1 from '../assets/curved/curwork1.jpg';
+import curWork2 from '../assets/curved/curwork2.jpg';
+
+// Gates
+import gateWork1 from '../assets/gates/gatework1.jpg';
+import gateWork2 from '../assets/gates/gatework2.jpg';
+
+// Mezzanine Floors
+import mezzaWork1 from '../assets/mezza.jpg';
+
+// Heavy Structure Fabrication & Erection
+import fabWork1 from '../assets/heavy/fabwork1.jpg';
+import fabWork2 from '../assets/heavy/fabwork2.jpg';
+
 // This array will be where you add your new project images
 // Categorized Gallery Structure
 const categories = [
@@ -97,32 +119,48 @@ const categories = [
     {
         id: 3,
         name: 'PUFF SHEET WORK',
-        images: []
+        images: [
+            { url: puffWork1, title: 'Puff Sheet Work 1' },
+            { url: puffWork2, title: 'Puff Sheet Work 2' }
+        ]
     },
     {
         id: 5,
         name: 'PERGOLAS',
-        images: []
+        images: [
+            { url: pergoWork1, title: 'Pergola Work 1' }
+        ]
     },
     {
         id: 6,
         name: 'MEZZANINE FLOORS',
-        images: []
+        images: [
+            { url: mezzaWork1, title: 'Mezzanine Floor Work 1' }
+        ]
     },
     {
         id: 7,
         name: 'CURVED ROOFINGS',
-        images: []
+        images: [
+            { url: curWork1, title: 'Curved Roofing Work 1' },
+            { url: curWork2, title: 'Curved Roofing Work 2' }
+        ]
     },
     {
         id: 8,
         name: 'GATES',
-        images: []
+        images: [
+            { url: gateWork1, title: 'Gate Work 1' },
+            { url: gateWork2, title: 'Gate Work 2' }
+        ]
     },
     {
         id: 12,
         name: 'Heavy Structure Fabrication & Erection',
-        images: []
+        images: [
+            { url: fabWork1, title: 'Heavy Fabrication Work 1' },
+            { url: fabWork2, title: 'Heavy Fabrication Work 2' }
+        ]
     }
 ];
 

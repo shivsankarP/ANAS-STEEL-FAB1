@@ -123,24 +123,31 @@ const Contact = () => {
                     </div>
                 </div>
 
-                {/* Map Placeholder */}
-                <div className="mt-24 h-96 w-full rounded-3xl overflow-hidden glass-dark relative group">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center">
-                            <FaMapMarkerAlt className="text-cobalt text-5xl mx-auto mb-4" />
-                            <p className="text-slate-400">Headquarters Location</p>
-                            <p className="text-white font-bold">Chelembra, Malappuram, Kerala</p>
-                        </div>
-                    </div>
+                {/* Map */}
+                <div className="mt-24 h-96 w-full rounded-3xl overflow-hidden relative group shadow-2xl">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31317.073403867605!2d75.87532395521443!3d11.140417983633633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba651918365697d%3A0x6a15bd7f0e75a907!2sChelembra%2C%20Kerala!5e0!3m2!1sen!2sin!4v1709148400000!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.8!2d75.8704729!3d11.148629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba651903380cfef%3A0x8ce1dfe7c885556!2sAnas%20Steel%20Fab!5e0!3m2!1sen!2sin!4v1709148400000!5m2!1sen!2sin"
                         width="100%"
                         height="100%"
-                        style={{ border: 0, opacity: 0.3 }}
+                        style={{ border: 0 }}
                         allowFullScreen=""
                         loading="lazy"
-                        className="group-hover:opacity-60 transition-opacity"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Anas Steel Fab Location"
                     ></iframe>
+                    {/* Transparent full-cover overlay — tap anywhere to open Maps */}
+                    <a
+                        href="https://maps.app.goo.gl/K3BPGzMMQv7QcM8L8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 z-10"
+                        aria-label="Open Anas Steel Fab in Google Maps"
+                    />
+                    {/* Open in Maps badge */}
+                    <div className="absolute bottom-4 right-4 z-20 flex items-center gap-2 bg-white text-navy font-bold text-sm px-4 py-2 rounded-xl shadow-lg pointer-events-none">
+                        <FaMapMarkerAlt />
+                        Tap to open in Google Maps
+                    </div>
                 </div>
             </div>
         </section>
