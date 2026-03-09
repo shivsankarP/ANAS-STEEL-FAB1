@@ -138,14 +138,11 @@ const Hero = () => {
                             />
                             <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent transition-opacity duration-300 ${index === currentIndex ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}></div>
                             <div className={`absolute bottom-4 left-4 right-4 transition-all duration-500 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100'}`}>
-                                <span className="inline-block px-2 py-0.5 mb-2 text-[10px] font-black uppercase tracking-widest rounded-full bg-periwinkle/80 text-white">
+                                <span className="hidden md:inline-block px-2 py-0.5 mb-2 text-[10px] font-black uppercase tracking-widest rounded-full bg-periwinkle/80 text-white">
                                     {item.tag}
                                 </span>
-                                <p className="text-white font-black text-sm md:text-base leading-tight mb-1">
+                                <p className="hidden md:block text-white font-black text-sm md:text-base leading-tight mb-1">
                                     {item.title}
-                                </p>
-                                <p className="text-white/70 text-[11px] leading-snug font-light italic">
-                                    {item.tagline}
                                 </p>
                             </div>
                             {index === currentIndex && (

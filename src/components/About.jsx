@@ -20,23 +20,12 @@ const About = () => {
                                     muted
                                     loop
                                     playsInline
-                                    className="w-full h-full object-cover scale-110 blur-sm opacity-50 brightness-[0.8] transition-opacity duration-1000"
+                                    className="w-full h-full object-cover scale-110 blur-[1px] opacity-50 brightness-[0.8] transition-opacity duration-1000"
                                 >
                                     <source src="/video.mp4" type="video/mp4" />
                                 </video>
                                 <div className="absolute inset-0 bg-gradient-to-br from-navy/60 via-transparent to-navy/40 pointer-events-none"></div>
-                                {/* RM Logo Overlay */}
-                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                    <motion.img
-                                        src="/rm_logo.png"
-                                        alt="RM Logo"
-                                        initial={{ opacity: 0, scale: 0.8 }}
-                                        whileInView={{ opacity: 1, scale: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1, delay: 0.5 }}
-                                        className="w-56 md:w-96 h-auto drop-shadow-2xl"
-                                    />
-                                </div>
+
                             </div>
                             <div className="absolute -bottom-20 -right-10 bg-navy p-10 rounded-2xl shadow-xl hidden md:block">
                                 <span className="text-5xl font-bold text-periwinkle block">15+</span>
