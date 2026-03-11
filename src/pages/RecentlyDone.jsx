@@ -6,6 +6,18 @@ import { FiArrowLeft, FiX, FiMaximize2, FiGrid, FiChevronLeft, FiChevronRight } 
 // Puff Sheet Work
 import puffWork1 from '../assets/puff/work1.jpg';
 import puffWork2 from '../assets/puff/work2.jpg';
+import puffWork3 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.07 PM.jpeg';
+import puffWork4 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.10 PM.jpeg';
+import puffWork5 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.11 PM (1).jpeg';
+import puffWork6 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.11 PM.jpeg';
+import puffWork7 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM (1).jpeg';
+import puffWork8 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM (2).jpeg';
+import puffWork9 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM (3).jpeg';
+import puffWork10 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM.jpeg';
+import puffWork11 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.13 PM (1).jpeg';
+import puffWork12 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.13 PM (2).jpeg';
+import puffWork13 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.13 PM.jpeg';
+import puffWork14 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.14 PM.jpeg';
 
 // Pergolas
 import pergoWork1 from '../assets/pergo/pergwrok1.jpg';
@@ -21,9 +33,24 @@ import gateWork2 from '../assets/gates/gatework2.jpg';
 // Mezzanine Floors
 import mezzaWork1 from '../assets/mezza.jpg';
 
+// Security Cabin
+import cabinWork1 from '../assets/cabin/WhatsApp Image 2026-03-11 at 10.45.27 PM.jpeg';
+
 // Heavy Structure Fabrication & Erection
 import fabWork1 from '../assets/heavy/fabwork1.jpg';
 import fabWork2 from '../assets/heavy/fabwork2.jpg';
+import fabWork3 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.16 PM.jpeg';
+import fabWork4 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.17 PM (1).jpeg';
+import fabWork5 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.17 PM (2).jpeg';
+import fabWork6 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.17 PM.jpeg';
+import fabWork7 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.18 PM.jpeg';
+import fabWork8 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.39.39 PM.jpeg';
+import fabWork9 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.39.40 PM.jpeg';
+import fabWork10 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.40.22 PM.jpeg';
+import fabWork11 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.03 PM.jpeg';
+import fabWork12 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.04 PM (1).jpeg';
+import fabWork13 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.04 PM.jpeg';
+import fabWork14 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.05 PM.jpeg';
 
 // This array will be where you add your new project images
 // Categorized Gallery Structure
@@ -120,6 +147,18 @@ const categories = [
         id: 3,
         name: 'PUFF SHEET WORK',
         images: [
+            { url: puffWork3, title: 'Puff Sheet Work 3' },
+            { url: puffWork4, title: 'Puff Sheet Work 4' },
+            { url: puffWork5, title: 'Puff Sheet Work 5' },
+            { url: puffWork6, title: 'Puff Sheet Work 6' },
+            { url: puffWork7, title: 'Puff Sheet Work 7' },
+            { url: puffWork8, title: 'Puff Sheet Work 8' },
+            { url: puffWork9, title: 'Puff Sheet Work 9' },
+            { url: puffWork10, title: 'Puff Sheet Work 10' },
+            { url: puffWork11, title: 'Puff Sheet Work 11' },
+            { url: puffWork12, title: 'Puff Sheet Work 12' },
+            { url: puffWork13, title: 'Puff Sheet Work 13' },
+            { url: puffWork14, title: 'Puff Sheet Work 14' },
             { url: puffWork1, title: 'Puff Sheet Work 1' },
             { url: puffWork2, title: 'Puff Sheet Work 2' }
         ]
@@ -158,8 +197,27 @@ const categories = [
         id: 12,
         name: 'Heavy Structure Fabrication & Erection',
         images: [
+            { url: fabWork8, title: 'Heavy Fabrication Work 8' },
+            { url: fabWork9, title: 'Heavy Fabrication Work 9' },
+            { url: fabWork10, title: 'Heavy Fabrication Work 10' },
+            { url: fabWork11, title: 'Heavy Fabrication Work 11' },
+            { url: fabWork12, title: 'Heavy Fabrication Work 12' },
+            { url: fabWork13, title: 'Heavy Fabrication Work 13' },
+            { url: fabWork14, title: 'Heavy Fabrication Work 14' },
+            { url: fabWork3, title: 'Heavy Fabrication Work 3' },
+            { url: fabWork4, title: 'Heavy Fabrication Work 4' },
+            { url: fabWork5, title: 'Heavy Fabrication Work 5' },
+            { url: fabWork6, title: 'Heavy Fabrication Work 6' },
+            { url: fabWork7, title: 'Heavy Fabrication Work 7' },
             { url: fabWork1, title: 'Heavy Fabrication Work 1' },
             { url: fabWork2, title: 'Heavy Fabrication Work 2' }
+        ]
+    },
+    {
+        id: 15,
+        name: 'SECURITY CABIN',
+        images: [
+            { url: cabinWork1, title: 'Security Cabin 1' }
         ]
     }
 ];

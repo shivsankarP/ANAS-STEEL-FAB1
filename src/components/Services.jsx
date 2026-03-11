@@ -20,7 +20,13 @@ const services = [
         title: 'Heavy Structure Fabrication & Erection',
         desc: 'Professional on-site erection services for complex steel structures following strict safety standards.',
         icon: <FaHardHat />,
-        image: '/services/erection.png'
+        image: '/services/fab_erection.jpeg'
+    },
+    {
+        title: 'Puff Sheet Work',
+        desc: 'Premium puff sheet roofing and cladding solutions for industrial and commercial buildings, offering superior insulation and durability.',
+        icon: <FaArchway />,
+        image: '/services/puff_sheet.jpeg'
     }
 ];
 
@@ -48,7 +54,7 @@ const Services = () => {
                     </motion.h3>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {services.map((service, index) => (
                         <motion.div
                             key={service.title}
