@@ -4,13 +4,13 @@ import { FaBuilding } from 'react-icons/fa';
 import LogoLoop from './LogoLoop';
 
 // ─── Add your clients here ───────────────────────────────────────────────────
-// To use an image: { src: '/logos/client1.png', alt: 'Client Name' }
+// To use an image: { src: '/logos/client1.webp', alt: 'Client Name' }
 // To use an icon:  { node: <FaBuilding />, title: 'Client Name' }
 const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/greenwormlogo.png" alt="Green Worms" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/greenwormlogo.webp" alt="Green Worms" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '13px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     Green Worms – Sustainable Waste Management Solutions
                 </span>
@@ -21,7 +21,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/kmctlogo.png" alt="KMCT Medical College" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/kmctlogo.webp" alt="KMCT Medical College" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     KMCT Medical College
                 </span>
@@ -32,7 +32,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/TClogo.jpg" alt="TC-ONE Realtors & Developers" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/TClogo.webp" alt="TC-ONE Realtors & Developers" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     TC-ONE Realtors &amp; Developers
                 </span>
@@ -43,7 +43,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/sowparnikalogo.png" alt="Sowparnika" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/sowparnikalogo.webp" alt="Sowparnika" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     SOWPARNIKA – Delivering Happiness
                 </span>
@@ -54,7 +54,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/esconlogo.png" alt="ESCON Elevators" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/esconlogo.webp" alt="ESCON Elevators" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     ESCON Elevators
                 </span>
@@ -65,7 +65,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/hilitelogo.jpg" alt="HiLITE Realty" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/hilitelogo.webp" alt="HiLITE Realty" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     HiLITE Realty
                 </span>
@@ -76,7 +76,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/konelogo.png" alt="KONE Elevator and Escalator" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/konelogo.webp" alt="KONE Elevator and Escalator" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     KONE Elevator and Escalator
                 </span>

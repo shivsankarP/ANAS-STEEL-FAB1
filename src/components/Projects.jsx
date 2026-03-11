@@ -7,84 +7,84 @@ const projectItems = [
         title: 'Waste Management, Material Recovery & Recycling Plant',
         location: 'Industrial Sector',
         country: 'India',
-        image: '/services/waste.jpg',
+        image: '/services/waste.webp',
         galleryId: 13
     },
     {
         title: 'EFFLUENT TREATMENT PLANT',
         location: 'Chemical Industry',
         country: 'India',
-        image: '/services/ETP.jpg',
+        image: '/services/ETP.webp',
         galleryId: 11
     },
     {
         title: 'Heavy Structure Fabrication & Erection',
         location: 'Mainland Sites',
         country: 'India',
-        image: '/services/erection.png',
+        image: '/services/erection.webp',
         galleryId: 12
     },
     {
         title: 'PUFF SHEET WORK',
         location: 'Cold Storage Lab',
         country: 'Calicut, India',
-        image: '/projects/puffsheet.jpg',
+        image: '/projects/puffsheet.webp',
         galleryId: 3
     },
     {
         title: 'STEEL STRUCTURAL WORK',
         location: 'Business Park',
         country: 'Trivandrum, India',
-        image: '/projects/steelstructure.jpg',
+        image: '/projects/steelstructure.webp',
         galleryId: 4
     },
     {
         title: 'PERGOLAS',
         location: 'Leisure Club',
         country: 'Munnar, India',
-        image: '/projects/pergolas1.jpg',
+        image: '/projects/pergolas1.webp',
         galleryId: 5
     },
     {
         title: 'MEZZANINE FLOORS',
         location: 'Distribution Hub',
         country: 'Palakkad, India',
-        image: '/projects/mezzanine.jpg',
+        image: '/projects/mezzanine.webp',
         galleryId: 6
     },
     {
         title: 'CURVED ROOFINGS',
         location: 'Sports Arena',
         country: 'Wayanad, India',
-        image: '/projects/curvedroof.jpg',
+        image: '/projects/curvedroof.webp',
         galleryId: 7
     },
     {
         title: 'GATES',
         location: 'Luxury Estate',
         country: 'Kottayam, India',
-        image: '/projects/gates.jpg',
+        image: '/projects/gates.webp',
         galleryId: 8
     },
     {
         title: 'ELEVATORS',
         location: 'Commercial & Residential',
         country: 'Kerala, India',
-        image: '/projects/elevators.jpg',
+        image: '/projects/elevators.webp',
         galleryId: 9
     },
     {
         title: 'CANOPY',
         location: 'Commercial Center',
         country: 'Kerala, India',
-        image: '/projects/canopy.jpg',
+        image: '/projects/canopy.webp',
         galleryId: 1
     },
     {
         title: 'ROOF TRUSS WORKS',
         location: 'Storage Facility',
         country: 'Kochi, India',
-        image: '/projects/rooftruss.jpg',
+        image: '/projects/rooftruss.webp',
         galleryId: 2
     }
 ];

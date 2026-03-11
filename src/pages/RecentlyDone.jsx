@@ -4,53 +4,53 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { FiArrowLeft, FiX, FiMaximize2, FiGrid, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 // Puff Sheet Work
-import puffWork1 from '../assets/puff/work1.jpg';
-import puffWork2 from '../assets/puff/work2.jpg';
-import puffWork3 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.07 PM.jpeg';
-import puffWork4 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.10 PM.jpeg';
-import puffWork5 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.11 PM (1).jpeg';
-import puffWork6 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.11 PM.jpeg';
-import puffWork7 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM (1).jpeg';
-import puffWork8 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM (2).jpeg';
-import puffWork9 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM (3).jpeg';
-import puffWork10 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM.jpeg';
-import puffWork11 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.13 PM (1).jpeg';
-import puffWork12 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.13 PM (2).jpeg';
-import puffWork13 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.13 PM.jpeg';
-import puffWork14 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.14 PM.jpeg';
+import puffWork1 from '../assets/puff/work1.webp';
+import puffWork2 from '../assets/puff/work2.webp';
+import puffWork3 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.07 PM.webp';
+import puffWork4 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.10 PM.webp';
+import puffWork5 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.11 PM (1).webp';
+import puffWork6 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.11 PM.webp';
+import puffWork7 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM (1).webp';
+import puffWork8 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM (2).webp';
+import puffWork9 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM (3).webp';
+import puffWork10 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.12 PM.webp';
+import puffWork11 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.13 PM (1).webp';
+import puffWork12 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.13 PM (2).webp';
+import puffWork13 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.13 PM.webp';
+import puffWork14 from '../assets/puff/WhatsApp Image 2026-03-11 at 10.36.14 PM.webp';
 
 // Pergolas
-import pergoWork1 from '../assets/pergo/pergwrok1.jpg';
+import pergoWork1 from '../assets/pergo/pergwrok1.webp';
 
 // Curved Roofings
-import curWork1 from '../assets/curved/curwork1.jpg';
-import curWork2 from '../assets/curved/curwork2.jpg';
+import curWork1 from '../assets/curved/curwork1.webp';
+import curWork2 from '../assets/curved/curwork2.webp';
 
 // Gates
-import gateWork1 from '../assets/gates/gatework1.jpg';
-import gateWork2 from '../assets/gates/gatework2.jpg';
+import gateWork1 from '../assets/gates/gatework1.webp';
+import gateWork2 from '../assets/gates/gatework2.webp';
 
 // Mezzanine Floors
-import mezzaWork1 from '../assets/mezza.jpg';
+import mezzaWork1 from '../assets/mezza.webp';
 
 // Security Cabin
-import cabinWork1 from '../assets/cabin/WhatsApp Image 2026-03-11 at 10.45.27 PM.jpeg';
+import cabinWork1 from '../assets/cabin/WhatsApp Image 2026-03-11 at 10.45.27 PM.webp';
 
 // Heavy Structure Fabrication & Erection
-import fabWork1 from '../assets/heavy/fabwork1.jpg';
-import fabWork2 from '../assets/heavy/fabwork2.jpg';
-import fabWork3 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.16 PM.jpeg';
-import fabWork4 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.17 PM (1).jpeg';
-import fabWork5 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.17 PM (2).jpeg';
-import fabWork6 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.17 PM.jpeg';
-import fabWork7 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.18 PM.jpeg';
-import fabWork8 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.39.39 PM.jpeg';
-import fabWork9 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.39.40 PM.jpeg';
-import fabWork10 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.40.22 PM.jpeg';
-import fabWork11 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.03 PM.jpeg';
-import fabWork12 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.04 PM (1).jpeg';
-import fabWork13 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.04 PM.jpeg';
-import fabWork14 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.05 PM.jpeg';
+import fabWork1 from '../assets/heavy/fabwork1.webp';
+import fabWork2 from '../assets/heavy/fabwork2.webp';
+import fabWork3 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.16 PM.webp';
+import fabWork4 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.17 PM (1).webp';
+import fabWork5 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.17 PM (2).webp';
+import fabWork6 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.17 PM.webp';
+import fabWork7 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.26.18 PM.webp';
+import fabWork8 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.39.39 PM.webp';
+import fabWork9 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.39.40 PM.webp';
+import fabWork10 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.40.22 PM.webp';
+import fabWork11 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.03 PM.webp';
+import fabWork12 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.04 PM (1).webp';
+import fabWork13 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.04 PM.webp';
+import fabWork14 from '../assets/heavy/WhatsApp Image 2026-03-11 at 10.42.05 PM.webp';
 
 // This array will be where you add your new project images
 // Categorized Gallery Structure
@@ -60,50 +60,50 @@ const categories = [
         name: 'Green Worms - Waste Management, Material Recovery & Recycling Plant',
         images: [
             // Kannur Site
-            { url: '/projects/greenworms/kannur/DJI_0063.jpeg', title: 'Green Worms MRF - Kannur' },
-            { url: '/projects/greenworms/kannur/DJI_20250106121148_0164_D (1).jpeg', title: 'Green Worms MRF - Kannur' },
-            { url: '/projects/greenworms/kannur/WhatsApp Image 2026-02-26 at 8.15.00 PM (1).jpeg', title: 'Green Worms MRF - Kannur' },
-            { url: '/projects/greenworms/kannur/WhatsApp Image 2026-02-26 at 8.15.00 PM (2).jpeg', title: 'Green Worms MRF - Kannur' },
-            { url: '/projects/greenworms/kannur/generated-image.png', title: 'Green Worms MRF - Kannur' },
-            { url: '/projects/greenworms/kannur/generated-image (1).png', title: 'Green Worms MRF - Kannur' },
-            { url: '/projects/greenworms/kannur/generated-image (2).png', title: 'Green Worms MRF - Kannur' },
-            { url: '/projects/greenworms/kannur/generated-image (3).png', title: 'Green Worms MRF - Kannur' },
-            { url: '/projects/greenworms/kannur/generated-image (4).png', title: 'Green Worms MRF - Kannur' },
+            { url: '/projects/greenworms/kannur/DJI_0063.webp', title: 'Green Worms MRF - Kannur' },
+            { url: '/projects/greenworms/kannur/DJI_20250106121148_0164_D (1).webp', title: 'Green Worms MRF - Kannur' },
+            { url: '/projects/greenworms/kannur/WhatsApp Image 2026-02-26 at 8.15.00 PM (1).webp', title: 'Green Worms MRF - Kannur' },
+            { url: '/projects/greenworms/kannur/WhatsApp Image 2026-02-26 at 8.15.00 PM (2).webp', title: 'Green Worms MRF - Kannur' },
+            { url: '/projects/greenworms/kannur/generated-image.webp', title: 'Green Worms MRF - Kannur' },
+            { url: '/projects/greenworms/kannur/generated-image (1).webp', title: 'Green Worms MRF - Kannur' },
+            { url: '/projects/greenworms/kannur/generated-image (2).webp', title: 'Green Worms MRF - Kannur' },
+            { url: '/projects/greenworms/kannur/generated-image (3).webp', title: 'Green Worms MRF - Kannur' },
+            { url: '/projects/greenworms/kannur/generated-image (4).webp', title: 'Green Worms MRF - Kannur' },
 
             // Kasaragod Site
-            { url: '/projects/greenworms/kasaragod/DJI_0832.jpeg', title: 'Green Worms MRF - Kasaragod' },
-            { url: '/projects/greenworms/kasaragod/DJI_0834.jpeg', title: 'Green Worms MRF - Kasaragod' },
-            { url: '/projects/greenworms/kasaragod/DJI_0869.jpeg', title: 'Green Worms MRF - Kasaragod' },
+            { url: '/projects/greenworms/kasaragod/DJI_0832.webp', title: 'Green Worms MRF - Kasaragod' },
+            { url: '/projects/greenworms/kasaragod/DJI_0834.webp', title: 'Green Worms MRF - Kasaragod' },
+            { url: '/projects/greenworms/kasaragod/DJI_0869.webp', title: 'Green Worms MRF - Kasaragod' },
 
             // Thamarassery Site
-            { url: '/projects/greenworms/thamarassery/IMG_8944.JPG', title: 'Green Worms MRF - Thamarassery' },
-            { url: '/projects/greenworms/thamarassery/IMG_8946.JPG', title: 'Green Worms MRF - Thamarassery' },
-            { url: '/projects/greenworms/thamarassery/ff.png', title: 'Green Worms MRF - Thamarassery' },
-            { url: '/projects/greenworms/thamarassery/generated-image.png', title: 'Green Worms MRF - Thamarassery' },
-            { url: '/projects/greenworms/thamarassery/generated-image (1).png', title: 'Green Worms MRF - Thamarassery' },
-            { url: '/projects/greenworms/thamarassery/generated-image (2).png', title: 'Green Worms MRF - Thamarassery' },
-            { url: '/projects/greenworms/thamarassery/generated-image (3).png', title: 'Green Worms MRF - Thamarassery' },
-            { url: '/projects/greenworms/thamarassery/generated-image (4).png', title: 'Green Worms MRF - Thamarassery' },
-            { url: '/projects/greenworms/thamarassery/generated-image (5).png', title: 'Green Worms MRF - Thamarassery' }
+            { url: '/projects/greenworms/thamarassery/IMG_8944.webp', title: 'Green Worms MRF - Thamarassery' },
+            { url: '/projects/greenworms/thamarassery/IMG_8946.webp', title: 'Green Worms MRF - Thamarassery' },
+            { url: '/projects/greenworms/thamarassery/ff.webp', title: 'Green Worms MRF - Thamarassery' },
+            { url: '/projects/greenworms/thamarassery/generated-image.webp', title: 'Green Worms MRF - Thamarassery' },
+            { url: '/projects/greenworms/thamarassery/generated-image (1).webp', title: 'Green Worms MRF - Thamarassery' },
+            { url: '/projects/greenworms/thamarassery/generated-image (2).webp', title: 'Green Worms MRF - Thamarassery' },
+            { url: '/projects/greenworms/thamarassery/generated-image (3).webp', title: 'Green Worms MRF - Thamarassery' },
+            { url: '/projects/greenworms/thamarassery/generated-image (4).webp', title: 'Green Worms MRF - Thamarassery' },
+            { url: '/projects/greenworms/thamarassery/generated-image (5).webp', title: 'Green Worms MRF - Thamarassery' }
         ]
     },
     {
         id: 1,
         name: 'CANOPY',
         images: [
-            { url: '/projects/generated-image (3).png', title: 'Canopy Work 1' },
-            { url: '/projects/generated-image (5).png', title: 'Canopy Work 2' },
-            { url: '/projects/generated-image (6).png', title: 'Canopy Work 3' },
-            { url: '/projects/generated-image (7).png', title: 'Canopy Work 4' }
+            { url: '/projects/generated-image (3).webp', title: 'Canopy Work 1' },
+            { url: '/projects/generated-image (5).webp', title: 'Canopy Work 2' },
+            { url: '/projects/generated-image (6).webp', title: 'Canopy Work 3' },
+            { url: '/projects/generated-image (7).webp', title: 'Canopy Work 4' }
         ]
     },
     {
         id: 2,
         name: 'ROOF TRUSS WORKS',
         images: [
-            { url: '/projects/truss/Truss Work.png', title: 'Roof Truss Work 1' },
-            { url: '/projects/truss/Truss Work 2.png', title: 'Roof Truss Work 2' },
-            { url: '/projects/truss/Truss work 3.png', title: 'Roof Truss Work 3' }
+            { url: '/projects/truss/Truss Work.webp', title: 'Roof Truss Work 1' },
+            { url: '/projects/truss/Truss Work 2.webp', title: 'Roof Truss Work 2' },
+            { url: '/projects/truss/Truss work 3.webp', title: 'Roof Truss Work 3' }
         ]
     },
 
@@ -111,13 +111,13 @@ const categories = [
         id: 4,
         name: 'STEEL STRUCTURAL WORK',
         images: [
-            { url: '/projects/auditorium/generated-image (9).png', title: 'Auditorium Structural Work 1' },
-            { url: '/projects/auditorium/generated-image (10).png', title: 'Auditorium Structural Work 2' },
-            { url: '/projects/auditorium/generated-image (11).png', title: 'Auditorium Structural Work 3' },
-            { url: '/projects/auditorium/generated-image (12).png', title: 'Auditorium Structural Work 4' },
-            { url: '/projects/auditorium/generated-image (13).png', title: 'Auditorium Structural Work 5' },
-            { url: '/projects/auditorium/generated-image (14).png', title: 'Auditorium Structural Work 6' },
-            { url: '/projects/auditorium/generated-image (15).png', title: 'Auditorium Structural Work 7' }
+            { url: '/projects/auditorium/generated-image (9).webp', title: 'Auditorium Structural Work 1' },
+            { url: '/projects/auditorium/generated-image (10).webp', title: 'Auditorium Structural Work 2' },
+            { url: '/projects/auditorium/generated-image (11).webp', title: 'Auditorium Structural Work 3' },
+            { url: '/projects/auditorium/generated-image (12).webp', title: 'Auditorium Structural Work 4' },
+            { url: '/projects/auditorium/generated-image (13).webp', title: 'Auditorium Structural Work 5' },
+            { url: '/projects/auditorium/generated-image (14).webp', title: 'Auditorium Structural Work 6' },
+            { url: '/projects/auditorium/generated-image (15).webp', title: 'Auditorium Structural Work 7' }
         ]
     },
 
@@ -125,12 +125,12 @@ const categories = [
         id: 9,
         name: 'ELEVATORS',
         images: [
-            { url: '/projects/lift/WhatsApp Image 2026-02-26 at 8.26.25 PM (1).jpeg', title: 'Elevator Work 1' },
-            { url: '/projects/lift/WhatsApp Image 2026-02-26 at 8.26.25 PM.jpeg', title: 'Elevator Work 2' },
-            { url: '/projects/lift/WhatsApp Image 2026-02-26 at 8.45.56 PM.jpeg', title: 'Elevator Work 3' },
-            { url: '/projects/lift/WhatsApp Image 2026-02-26 at 8.48.58 PM.jpeg', title: 'Elevator Work 4' },
-            { url: '/projects/lift/WhatsApp Image 2026-02-26 at 8.48.59 PM.jpeg', title: 'Elevator Work 5' },
-            { url: '/projects/lift/generated-image (8).png', title: 'Elevator Structure Render' }
+            { url: '/projects/lift/WhatsApp Image 2026-02-26 at 8.26.25 PM (1).webp', title: 'Elevator Work 1' },
+            { url: '/projects/lift/WhatsApp Image 2026-02-26 at 8.26.25 PM.webp', title: 'Elevator Work 2' },
+            { url: '/projects/lift/WhatsApp Image 2026-02-26 at 8.45.56 PM.webp', title: 'Elevator Work 3' },
+            { url: '/projects/lift/WhatsApp Image 2026-02-26 at 8.48.58 PM.webp', title: 'Elevator Work 4' },
+            { url: '/projects/lift/WhatsApp Image 2026-02-26 at 8.48.59 PM.webp', title: 'Elevator Work 5' },
+            { url: '/projects/lift/generated-image (8).webp', title: 'Elevator Structure Render' }
         ]
     },
 
@@ -138,9 +138,9 @@ const categories = [
         id: 11,
         name: 'EFFLUENT TREATMENT PLANT',
         images: [
-            { url: '/projects/etp/ETP.jpeg', title: 'ETP Project 1' },
-            { url: '/projects/etp/WhatsApp Image 2026-02-26 at 10.08.14 PM.jpeg', title: 'ETP Project 2' },
-            { url: '/projects/etp/aa.jpeg', title: 'ETP Project 3' }
+            { url: '/projects/etp/ETP.webp', title: 'ETP Project 1' },
+            { url: '/projects/etp/WhatsApp Image 2026-02-26 at 10.08.14 PM.webp', title: 'ETP Project 2' },
+            { url: '/projects/etp/aa.webp', title: 'ETP Project 3' }
         ]
     },
     {

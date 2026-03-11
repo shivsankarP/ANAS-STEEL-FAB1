@@ -8,25 +8,25 @@ const services = [
         title: 'Waste Management, Material Recovery & Recycling Plant',
         desc: 'Comprehensive waste management solutions including material recovery and recycling plant design and fabrication with precision steel engineering.',
         icon: <FaIndustry />,
-        image: '/services/waste.jpg'
+        image: '/services/waste.webp'
     },
     {
         title: 'Effluent Treatment Plant',
         desc: 'Advanced effluent treatment plant structures and systems built with high-grade steel for industrial and commercial applications.',
         icon: <FaProjectDiagram />,
-        image: '/services/ETP.jpg'
+        image: '/services/ETP.webp'
     },
     {
         title: 'Heavy Structure Fabrication & Erection',
         desc: 'Professional on-site erection services for complex steel structures following strict safety standards.',
         icon: <FaHardHat />,
-        image: '/services/fab_erection.jpeg'
+        image: '/services/fab_erection.webp'
     },
     {
         title: 'Puff Sheet Work',
         desc: 'Premium puff sheet roofing and cladding solutions for industrial and commercial buildings, offering superior insulation and durability.',
         icon: <FaArchway />,
-        image: '/services/puff_sheet.jpeg'
+        image: '/services/puff_sheet.webp'
     }
 ];
 

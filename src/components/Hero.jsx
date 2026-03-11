@@ -10,28 +10,28 @@ const POPULAR_ITEMS = [
         title: 'Waste Management & Recycling Plant',
         tag: 'Sustainability',
         tagline: 'Turning waste into worth — steel-engineered for a cleaner tomorrow.',
-        image: '/services/waste.jpg'
+        image: '/services/waste.webp'
     },
     {
         id: 2,
         title: 'Effluent Treatment Plant',
         tag: 'Water Treatment',
         tagline: 'Precision-built structures that protect our planet, drop by drop.',
-        image: '/services/ETP.jpg'
+        image: '/services/ETP.webp'
     },
     {
         id: 3,
         title: 'Heavy Structure Fabrication & Erection',
         tag: 'Structural',
         tagline: 'Rising steel, built right — safe, swift, and uncompromising.',
-        image: '/services/erection.png'
+        image: '/services/erection.webp'
     },
     {
         id: 4,
         title: 'Roofing Solutions',
         tag: 'Infrastructure',
         tagline: 'Engineered covers that shield every structure with strength.',
-        image: '/services/roofsolution.jpg'
+        image: '/services/roofsolution.webp'
     },
 ];
 
