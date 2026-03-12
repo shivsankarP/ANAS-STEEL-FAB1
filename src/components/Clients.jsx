@@ -10,7 +10,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/greenwormlogo.webp" alt="Green Worms" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/greenwormlogo.webp" alt="Green Worms" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '13px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     Green Worms – Sustainable Waste Management Solutions
                 </span>
@@ -21,7 +21,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/kmctlogo.webp" alt="KMCT Medical College" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/kmctlogo.webp" alt="KMCT Medical College" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     KMCT Medical College
                 </span>
@@ -32,7 +32,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/TClogo.webp" alt="TC-ONE Realtors & Developers" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/TClogo.webp" alt="TC-ONE Realtors & Developers" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     TC-ONE Realtors &amp; Developers
                 </span>
@@ -43,7 +43,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/sowparnikalogo.webp" alt="Sowparnika" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/sowparnikalogo.webp" alt="Sowparnika" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     SOWPARNIKA – Delivering Happiness
                 </span>
@@ -54,7 +54,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/esconlogo.webp" alt="ESCON Elevators" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/esconlogo.webp" alt="ESCON Elevators" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     ESCON Elevators
                 </span>
@@ -65,7 +65,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/hilitelogo.webp" alt="HiLITE Realty" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/hilitelogo.webp" alt="HiLITE Realty" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     HiLITE Realty
                 </span>
@@ -76,7 +76,7 @@ const clients = [
     {
         node: (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-                <img src="/logos/konelogo.webp" alt="KONE Elevator and Escalator" style={{ height: '90px', width: 'auto', objectFit: 'contain' }} />
+                <img src="/logos/konelogo.webp" alt="KONE Elevator and Escalator" style={{ height: '60px', width: 'auto', objectFit: 'contain' }} />
                 <span style={{ fontSize: '11px', fontWeight: '600', color: '#00205B', whiteSpace: 'nowrap', letterSpacing: '0.02em' }}>
                     KONE Elevator and Escalator
                 </span>
@@ -89,11 +89,11 @@ const clients = [
 
 const Clients = () => {
     return (
-        <section id="clients" className="py-24 bg-slate-50 overflow-hidden">
-            <div className="container mx-auto px-6">
+        <section id="clients" className="py-16 md:py-24 bg-slate-50 overflow-hidden">
+            <div className="container mx-auto px-4 sm:px-6">
 
                 {/* Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-10 md:mb-16">
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -127,14 +127,14 @@ const Clients = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, duration: 0.8 }}
-                style={{ height: '200px', position: 'relative', overflow: 'hidden' }}
+                style={{ height: '140px', position: 'relative', overflow: 'hidden' }}
             >
                 <LogoLoop
                     logos={clients}
                     speed={80}
                     direction="left"
-                    logoHeight={110}
-                    gap={80}
+                    logoHeight={80}
+                    gap={60}
                     hoverSpeed={0}
                     scaleOnHover
                     fadeOut

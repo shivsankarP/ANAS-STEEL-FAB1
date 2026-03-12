@@ -108,7 +108,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden">
+                    <div className="lg:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="p-2 rounded-lg transition-colors duration-300 text-navy hover:bg-slate-100"

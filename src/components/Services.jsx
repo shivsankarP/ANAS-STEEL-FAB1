@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { FaIndustry, FaProjectDiagram, FaHardHat, FaArchway } from 'react-icons/fa';
 
 const services = [
@@ -32,9 +31,9 @@ const services = [
 
 const Services = () => {
     return (
-        <section id="services" className="py-24 bg-slate-50">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-20">
+        <section id="services" className="py-16 md:py-24 bg-slate-50">
+            <div className="container mx-auto px-4 sm:px-6">
+                <div className="text-center mb-12 md:mb-20">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -48,36 +47,36 @@ const Services = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-bold text-navy"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy"
                     >
                         Specialized Solutions
                     </motion.h3>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
                     {services.map((service, index) => (
                         <motion.div
                             key={service.title}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.2 }}
+                            transition={{ delay: index * 0.15 }}
                             className="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
                         >
-                            <div className="h-64 relative overflow-hidden">
+                            <div className="h-48 sm:h-56 md:h-64 relative overflow-hidden">
                                 <img
                                     src={service.image}
                                     alt={service.title}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-navy/20 group-hover:bg-cobalt/20 transition-colors"></div>
-                                <div className="absolute top-6 right-6 w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-cobalt text-2xl shadow-lg">
+                                <div className="absolute top-4 right-4 md:top-6 md:right-6 w-12 h-12 md:w-14 md:h-14 bg-white rounded-2xl flex items-center justify-center text-cobalt text-xl md:text-2xl shadow-lg">
                                     {service.icon}
                                 </div>
                             </div>
-                            <div className="p-10">
-                                <h4 className="text-2xl font-bold text-navy mb-4">{service.title}</h4>
-                                <p className="text-slate-500 leading-relaxed mb-6">
+                            <div className="p-6 md:p-8 lg:p-10">
+                                <h4 className="text-xl md:text-2xl font-bold text-navy mb-3 md:mb-4 leading-snug">{service.title}</h4>
+                                <p className="text-slate-500 text-sm md:text-base leading-relaxed mb-5 md:mb-6">
                                     {service.desc}
                                 </p>
                                 <div className="h-1 w-12 bg-periwinkle group-hover:w-full transition-all duration-500"></div>
@@ -85,7 +84,6 @@ const Services = () => {
                         </motion.div>
                     ))}
                 </div>
-
 
             </div>
         </section>

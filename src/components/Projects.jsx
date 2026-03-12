@@ -91,13 +91,13 @@ const projectItems = [
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-24 bg-[#f8f9fa]">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
+        <section id="projects" className="py-16 md:py-24 bg-[#f8f9fa]">
+            <div className="container mx-auto px-4 sm:px-6">
+                <div className="text-center mb-10 md:mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-5xl font-black text-navy tracking-tight"
+                        className="text-3xl sm:text-4xl md:text-5xl font-black text-navy tracking-tight"
                     >
                         We Do....
                     </motion.h2>
@@ -105,7 +105,7 @@ const Projects = () => {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-slate-600 text-lg max-w-2xl mx-auto mb-8 font-light"
+                        className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto mb-6 md:mb-8 font-light"
                     >
                         Engineering excellence for Kerala's skyline. We transform raw steel into landmarks with unmatched durability and design.
                     </motion.p>
@@ -113,21 +113,21 @@ const Projects = () => {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="flex flex-col md:flex-row items-center justify-center gap-6"
+                        className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6"
                     >
                         <Link
                             to="/recently-done"
-                            className="inline-block px-8 py-3 bg-navy text-white font-bold rounded-full hover:bg-cobalt transition-all shadow-lg active:scale-95 whitespace-nowrap"
+                            className="inline-block px-6 sm:px-8 py-3 bg-navy text-white font-bold rounded-full hover:bg-cobalt transition-all shadow-lg active:scale-95 whitespace-nowrap text-sm sm:text-base"
                         >
                             Most Recent Work
                         </Link>
-                        <span className="text-slate-500 font-semibold italic text-lg">
+                        <span className="text-slate-500 font-semibold italic text-base md:text-lg">
                             To Experience Our More Works
                         </span>
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 md:gap-6">
                     {projectItems.map((project, index) => (
                         <Link
                             key={index}

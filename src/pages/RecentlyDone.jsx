@@ -285,7 +285,7 @@ const RecentlyDone = () => {
 
     return (
         <div className="pt-10 min-h-screen bg-white text-navy">
-            <div className="container mx-auto px-6 mb-12">
+            <div className="container mx-auto px-4 sm:px-6 mb-10 md:mb-12">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <Link
                         to="/"
@@ -306,20 +306,20 @@ const RecentlyDone = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 mb-16">
+            <div className="container mx-auto px-4 sm:px-6 mb-12 md:mb-16">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h1 className="text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter text-navy">Recently Done....</h1>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 md:mb-4 uppercase tracking-tighter text-navy">Recently Done....</h1>
                     <p className="text-slate-500 text-lg max-w-2xl font-light italic">
                         A visual chronicle of our engineering precision, organized by category.
                     </p>
                 </motion.div>
             </div>
 
-            <div className="container mx-auto px-6 pb-24 space-y-20">
+            <div className="container mx-auto px-4 sm:px-6 pb-16 md:pb-24 space-y-14 md:space-y-20">
                 {filteredCategories.map((category) => (
                     <div key={category.id} id={`category-${category.id}`} className="relative scroll-mt-32">
                         <motion.div
@@ -328,14 +328,14 @@ const RecentlyDone = () => {
                             viewport={{ once: true }}
                             className="flex items-center gap-4 mb-8"
                         >
-                            <h2 className="text-2xl md:text-3xl font-black text-navy uppercase tracking-widest">
+                            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-navy uppercase tracking-widest leading-tight">
                                 {category.name}
                             </h2>
                             <div className="h-[2px] flex-grow bg-slate-100 rounded-full" />
                         </motion.div>
 
                         {category.images.length > 0 ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
                                 {category.images.map((img, index) => (
                                     <motion.div
                                         key={index}
@@ -419,7 +419,7 @@ const RecentlyDone = () => {
                                 src={selectedImg.url}
                                 alt={selectedImg.title}
                                 onClick={(e) => e.stopPropagation()}
-                                className="max-w-full max-h-[80vh] object-contain shadow-2xl rounded-2xl border border-white/10"
+                                className="max-w-full max-h-[80vh] object-contain shadow-2xl rounded-2xl border border-white/10 w-auto"
                                 style={{ maxWidth: 'calc(100vw - 120px)' }}
                             />
                         </AnimatePresence>

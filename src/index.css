@@ -20,6 +20,10 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     @apply bg-white text-slate-900;
