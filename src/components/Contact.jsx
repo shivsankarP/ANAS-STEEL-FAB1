@@ -72,7 +72,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-slate-400 text-sm">Visit Us</p>
-                                    <p className="text-base md:text-xl font-bold">Chelembra, Malappuram, <br className="hidden sm:block" /> Kerala, 672634</p>
+                                    <p className="text-base md:text-xl font-bold">Chelembra, Malappuram, <br className="hidden sm:block" /> Kerala, 673634</p>
                                 </div>
                             </div>
 
